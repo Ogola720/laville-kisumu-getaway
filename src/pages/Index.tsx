@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Calendar, MapPin, Star, Wifi, Car, Coffee, Tv, Users, Phone, Mail, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,7 +8,7 @@ const Index = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   
   const images = [
-    '/lovable-uploads/a09b3407-6a58-425b-bab2-a801e48653e9.png',
+    '/lovable-uploads/fb85b116-b705-4760-a5d3-839b9f1d9b7e.png',
     '/lovable-uploads/c8ab92f1-6867-42c3-af33-c5e0c1235163.png',
     '/lovable-uploads/80708dd8-dcad-438d-a4d9-84435743d0bc.png',
     '/lovable-uploads/d60e344c-7504-4141-b534-14b7e9107380.png',
