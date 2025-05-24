@@ -3,6 +3,7 @@ import { Calendar, MapPin, Star, Wifi, Car, Coffee, Tv, Users, Phone, Mail, Came
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { BookingSection } from '@/components/BookingSection';
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -29,6 +30,10 @@ const Index = () => {
     { icon: Users, label: '4-6 Guests' },
   ];
 
+  const scrollToBooking = () => {
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -46,7 +51,12 @@ const Index = () => {
               <a href="#amenities" className="text-gray-600 hover:text-blue-600 transition-colors">Amenities</a>
               <a href="#location" className="text-gray-600 hover:text-blue-600 transition-colors">Location</a>
               <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-              <Button className="bg-blue-600 hover:bg-blue-700">Book Now</Button>
+              <Button 
+                onClick={scrollToBooking}
+                className="bg-blue-600 hover:bg-blue-700"
+              >
+                Book Now
+              </Button>
             </div>
           </div>
         </div>
@@ -77,7 +87,11 @@ const Index = () => {
               Westwinds Court - Arina Estate, Kisumu, Kenya
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                onClick={scrollToBooking}
+                className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
+              >
                 <Calendar className="mr-2 h-5 w-5" />
                 Check Availability
               </Button>
@@ -168,6 +182,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Booking Section */}
+      <BookingSection />
 
       {/* Amenities Section */}
       <section id="amenities" className="py-16 bg-gray-50">
