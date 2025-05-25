@@ -1,5 +1,7 @@
 
 import { MapPin, Star, Users } from 'lucide-react';
+import { WeatherWidget } from './WeatherWidget';
+import { MapWidget } from './MapWidget';
 
 export function LocationSection() {
   return (
@@ -8,6 +10,12 @@ export function LocationSection() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Prime Location in Kisumu</h2>
           <p className="text-xl text-gray-600">Westwinds Court - Arina Estate, Off The Bypass</p>
+        </div>
+        
+        {/* Weather and Map Widgets */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <WeatherWidget />
+          <MapWidget />
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
