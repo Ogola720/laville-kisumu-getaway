@@ -8,6 +8,7 @@ import { BookingSection } from '@/components/BookingSection';
 import { AmenitiesSection } from '@/components/AmenitiesSection';
 import { LocationSection } from '@/components/LocationSection';
 import { ThingsToDoSection } from '@/components/ThingsToDoSection';
+import { ReviewsSection } from '@/components/ReviewsSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 
@@ -57,6 +58,8 @@ const Index = () => {
       <LocationSection />
       
       <ThingsToDoSection />
+      
+      <ReviewsSection />
       
       <ContactSection />
       

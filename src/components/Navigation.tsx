@@ -20,6 +20,7 @@ export function Navigation({ onBookNowClick }: NavigationProps) {
             <a href="#gallery" className="text-gray-600 hover:text-blue-600 transition-colors">Gallery</a>
             <a href="#amenities" className="text-gray-600 hover:text-blue-600 transition-colors">Amenities</a>
             <a href="#location" className="text-gray-600 hover:text-blue-600 transition-colors">Location</a>
+            <a href="#reviews" className="text-gray-600 hover:text-blue-600 transition-colors">Reviews</a>
             <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
             <Button 
               onClick={onBookNowClick}
