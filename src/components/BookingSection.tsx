@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { addDays, differenceInDays } from 'date-fns';
 import { Calendar, Users, Phone, Mail } from 'lucide-react';
@@ -30,16 +29,10 @@ export function BookingSection() {
     addDays(new Date(), 26),
   ];
 
-  const pricePerNight = 75; // USD
-  const numberOfNights = dateRange.from && dateRange.to 
-    ? differenceInDays(dateRange.to, dateRange.from)
-    : 0;
-  const totalPrice = numberOfNights * pricePerNight;
-
   const handleBooking = () => {
     if (dateRange.from && dateRange.to) {
       // In a real app, this would make an API call
-      alert(`Booking request sent!\nCheck-in: ${dateRange.from.toDateString()}\nCheck-out: ${dateRange.to.toDateString()}\nTotal: $${totalPrice}`);
+      alert(`Booking request sent!\nCheck-in: ${dateRange.from.toDateString()}\nCheck-out: ${dateRange.to.toDateString()}`);
     }
   };
 
@@ -70,27 +63,6 @@ export function BookingSection() {
                 onDateRangeChange={setDateRange}
                 unavailableDates={unavailableDates}
               />
-              
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Price per night</span>
-                  <span className="font-semibold">${pricePerNight}</span>
-                </div>
-                {numberOfNights > 0 && (
-                  <>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-600">{numberOfNights} nights</span>
-                      <span className="font-semibold">${numberOfNights * pricePerNight}</span>
-                    </div>
-                    <div className="border-t pt-3">
-                      <div className="flex items-center justify-between text-lg font-bold">
-                        <span>Total</span>
-                        <span className="text-blue-600">${totalPrice}</span>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
 
               <Button 
                 onClick={handleBooking}
