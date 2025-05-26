@@ -7,42 +7,42 @@ export function ThingsToDoSection() {
   const attractions = [
     {
       name: "Lake Victoria",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/55aedf4f-342b-4287-9473-d55ad087b35c.png",
       description: "Africa's largest lake offering beautiful sunsets, boat rides, and fishing experiences.",
       distance: "15 minutes drive",
       rating: 4.8
     },
     {
       name: "Mega City Mall",
-      image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/f9a37a59-13c1-4334-8a41-a266e6452350.png",
       description: "Modern shopping mall with restaurants, cinema, and various retail stores.",
       distance: "10 minutes drive",
       rating: 4.5
     },
     {
       name: "Impala Sanctuary",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/0e5674d3-0034-4d37-8f8c-1671a981480c.png",
       description: "Wildlife sanctuary home to impalas, hippos, and various bird species.",
       distance: "20 minutes drive",
       rating: 4.6
     },
     {
       name: "Kisumu Museum",
-      image: "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/664fe4c0-4b8c-438c-9c3f-f86e292e7c6c.png",
       description: "Learn about the rich cultural heritage and history of the Luo community.",
       distance: "12 minutes drive",
       rating: 4.3
     },
     {
       name: "Dunga Hill Camp",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/46b5851f-65ad-4998-9d3a-d16d8caaab21.png",
       description: "Scenic camping site with panoramic views of Lake Victoria and boat rides.",
       distance: "18 minutes drive",
       rating: 4.7
     },
     {
       name: "Kit Mikayi Rock",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop&crop=center",
+      image: "/lovable-uploads/479bf981-0f7b-4c69-8be0-5cbf606955d2.png",
       description: "Mystical rock formation with cultural significance and hiking trails.",
       distance: "25 minutes drive",
       rating: 4.4
