@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
@@ -16,6 +15,7 @@ const Index = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   
   const images = [
+    '/lovable-uploads/7623e742-874d-477f-b0e7-dee1736b7372.png',
     '/lovable-uploads/a09b3407-6a58-425b-bab2-a801e48653e9.png',
     '/lovable-uploads/c8ab92f1-6867-42c3-af33-c5e0c1235163.png',
     '/lovable-uploads/80708dd8-dcad-438d-a4d9-84435743d0bc.png',
