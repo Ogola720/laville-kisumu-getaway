@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { addDays, differenceInDays } from 'date-fns';
 import { Calendar, Users, Phone, Mail } from 'lucide-react';
@@ -16,6 +17,7 @@ export function BookingSection() {
     from: undefined,
     to: undefined,
   });
+  const [selectedProperty, setSelectedProperty] = useState<'1-bedroom' | '2-bedroom'>('2-bedroom');
 
   // Mock unavailable dates - in a real app, this would come from an API
   const unavailableDates = [
@@ -32,7 +34,24 @@ export function BookingSection() {
   const handleBooking = () => {
     if (dateRange.from && dateRange.to) {
       // In a real app, this would make an API call
-      alert(`Booking request sent!\nCheck-in: ${dateRange.from.toDateString()}\nCheck-out: ${dateRange.to.toDateString()}`);
+      alert(`Booking request sent!\nProperty: ${selectedProperty === '1-bedroom' ? '1-Bedroom Suite' : '2-Bedroom Suite'}\nCheck-in: ${dateRange.from.toDateString()}\nCheck-out: ${dateRange.to.toDateString()}`);
+    }
+  };
+
+  const propertyDetails = {
+    '1-bedroom': {
+      type: '1-Bedroom Suite',
+      maxGuests: '2 Guests',
+      checkin: 'anytime',
+      checkout: 'open',
+      minStay: '1 Night'
+    },
+    '2-bedroom': {
+      type: '2-Bedroom Suite',
+      maxGuests: '6 Guests',
+      checkin: 'anytime',
+      checkout: 'open',
+      minStay: '2 Nights'
     }
   };
 
@@ -84,26 +103,47 @@ export function BookingSection() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
+              {/* Property Type Selector */}
+              <div className="space-y-3">
+                <label className="text-sm font-medium text-gray-700">Choose Property Type:</label>
+                <div className="flex gap-3">
+                  <Button
+                    variant={selectedProperty === '1-bedroom' ? 'default' : 'outline'}
+                    onClick={() => setSelectedProperty('1-bedroom')}
+                    className="flex-1"
+                  >
+                    1-Bedroom Suite
+                  </Button>
+                  <Button
+                    variant={selectedProperty === '2-bedroom' ? 'default' : 'outline'}
+                    onClick={() => setSelectedProperty('2-bedroom')}
+                    className="flex-1"
+                  >
+                    2-Bedroom Suite
+                  </Button>
+                </div>
+              </div>
+
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Property Type</span>
-                  <span className="font-medium">2-Bedroom Suite</span>
+                  <span className="font-medium">{propertyDetails[selectedProperty].type}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Max Guests</span>
-                  <span className="font-medium">6 Guests</span>
+                  <span className="font-medium">{propertyDetails[selectedProperty].maxGuests}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Minimum Stay</span>
-                  <span className="font-medium">2 Nights</span>
+                  <span className="font-medium">{propertyDetails[selectedProperty].minStay}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Check-in</span>
-                  <span className="font-medium">3:00 PM</span>
+                  <span className="font-medium">{propertyDetails[selectedProperty].checkin}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Check-out</span>
-                  <span className="font-medium">11:00 AM</span>
+                  <span className="font-medium">{propertyDetails[selectedProperty].checkout}</span>
                 </div>
               </div>
 
