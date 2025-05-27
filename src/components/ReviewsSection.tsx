@@ -1,4 +1,3 @@
-
 import { Star, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -57,7 +56,7 @@ export function ReviewsSection() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section id="reviews" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-green-600 text-white">
