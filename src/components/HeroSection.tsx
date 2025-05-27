@@ -1,4 +1,3 @@
-
 import { Calendar, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -16,6 +15,10 @@ export function HeroSection({
   setSelectedImage, 
   onCheckAvailabilityClick 
 }: HeroSectionProps) {
+  const scrollToGallery = () => {
+    document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative h-[80vh] overflow-hidden">
       <div className="absolute inset-0">
@@ -49,7 +52,12 @@ export function HeroSection({
               <Calendar className="mr-2 h-5 w-5" />
               Check Availability
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900 text-lg px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              onClick={scrollToGallery}
+              className="text-white border-white hover:bg-white hover:text-gray-900 text-lg px-8 py-3"
+            >
               <Camera className="mr-2 h-5 w-5" />
               View Gallery
             </Button>

@@ -6,6 +6,10 @@ interface NavigationProps {
 }
 
 export function Navigation({ onBookNowClick }: NavigationProps) {
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,11 +21,11 @@ export function Navigation({ onBookNowClick }: NavigationProps) {
             <span className="text-2xl font-bold text-gray-900 tracking-wider" style={{ fontFamily: 'serif' }}>LAVILLE SUITES</span>
           </div>
           <div className="flex items-center space-x-6">
-            <a href="#gallery" className="text-gray-600 hover:text-blue-600 transition-colors">Gallery</a>
-            <a href="#amenities" className="text-gray-600 hover:text-blue-600 transition-colors">Amenities</a>
-            <a href="#location" className="text-gray-600 hover:text-blue-600 transition-colors">Location</a>
-            <a href="#reviews" className="text-gray-600 hover:text-blue-600 transition-colors">Reviews</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+            <button onClick={() => scrollToSection('gallery')} className="text-gray-600 hover:text-blue-600 transition-colors">Gallery</button>
+            <button onClick={() => scrollToSection('amenities')} className="text-gray-600 hover:text-blue-600 transition-colors">Amenities</button>
+            <button onClick={() => scrollToSection('location')} className="text-gray-600 hover:text-blue-600 transition-colors">Location</button>
+            <button onClick={() => scrollToSection('reviews')} className="text-gray-600 hover:text-blue-600 transition-colors">Reviews</button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-blue-600 transition-colors">Contact</button>
             <Button 
               onClick={onBookNowClick}
               className="bg-blue-600 hover:bg-blue-700"
