@@ -11,6 +11,7 @@ import { ReviewsSection } from '@/components/ReviewsSection';
 import { PaymentSection } from '@/components/PaymentSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+import { SEOHead } from '@/components/SEOHead';
 
 const Index = () => {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -36,6 +37,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEOHead />
+      
       <Navigation onBookNowClick={scrollToBooking} />
       
       <HeroSection 

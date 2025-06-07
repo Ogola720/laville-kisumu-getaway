@@ -12,7 +12,7 @@ export function Footer() {
           </div>
           <p className="text-gray-400 mb-4">Creating memorable home stays in the heart of Kisumu, Kenya</p>
           <p className="text-sm text-gray-500">
-            © 2024 Laville Suites. All rights reserved. | Westwinds Court - Arina Estate, Kisumu, Kenya
+            © 2025 Laville Suites. All rights reserved. | Westwinds Court - Arina Estate, Kisumu, Kenya
           </p>
         </div>
       </div>

@@ -1,3 +1,14 @@
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lavillesuites.com/sitemap.xml
+
+# Crawl-delay for well-behaved bots
+Crawl-delay: 1
+
+# Specific bot configurations
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +21,9 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
